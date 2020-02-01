@@ -1,0 +1,128 @@
+@charset "utf-8";
+/* CSS Document
+	@author : Rajesh Manoharan
+*/
+
+img, object, embed, video {
+	max-width: 100%;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('../fonts/OpenSans.eot?#iefix') format('embedded-opentype'),  url('../fonts/OpenSans.woff') format('woff'), url('../fonts/OpenSans.ttf')  format('truetype'), url('../fonts/OpenSans.svg#OpenSans') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'OpenSans-Bold';
+  src: url('../fonts/OpenSans-Bold.eot?#iefix') format('embedded-opentype'),  url('../fonts/OpenSans-Bold.woff') format('woff'), url('../fonts/OpenSans-Bold.ttf')  format('truetype'), url('../fonts/OpenSans-Bold.svg#OpenSans-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'OpenSans-Light';
+  src: url('../fonts/OpenSans-Light.eot?#iefix') format('embedded-opentype'),  url('../fonts/OpenSans-Light.woff') format('woff'), url('../fonts/OpenSans-Light.ttf')  format('truetype'), url('../fonts/OpenSans-Light.svg#OpenSans-Light') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+	min-width:370px;
+	position:relative;
+    font-size:0.875rem;
+    background: #003049;
+}
+
+html {
+  font-size: 16px;   
+}
+header .logo{
+    float:left;
+    font-size:30px;
+    color: #ffb238;
+    padding:20px;
+}
+header .logo img {
+    margin-left:-5px;
+}
+main {
+    background: #e0e0ce;
+   /* height: 100vh; */
+}
+.dropfield{
+    margin:20px 0;
+    font-size:16px;
+    border:1px solid #9f9f92;
+ }
+.mark{
+    padding:0;
+    background:none;
+}
+.mark img {
+    width:100%;
+}
+ .addmarker.btn{
+     background: #003049;
+     border:2px solid #ffb238;
+     color:#fff;
+     font-size: 16px;
+     display: inline-block;
+     padding: 20px 40px;        
+ }
+ .addmarker.btn:after {
+    content: "Mark defect";
+}
+ .draggable{
+     background: url('../images/marker-blue.png') no-repeat;
+     width: 45px;
+     height: 75px;
+     z-index: 1000;
+     position: absolute;    
+     background-size: contain;
+     display: inline-block;
+     cursor: move;
+     top:25%;
+     left:50%;
+ }
+ .draggable:nth-child(2){
+    background: url('../images/marker-yellow.png') no-repeat;
+    background-size: contain;
+ }
+ .draggable:nth-child(3){
+    background: url('../images/marker-red.png') no-repeat;
+    background-size: contain;
+ }
+ .guide{
+    display: none; 
+    position: absolute; 
+    left: 0; 
+    top: 0; 
+}
+
+#guide-h{
+    border-top: 1px dashed #55f; 
+    width: 100%; 
+}
+
+#guide-v{
+    border-left: 1px dashed #55f; 
+    height: 100%; 
+}
+.draggable.is-dragging { opacity: 0.7; }
+ @media only screen and (max-width: 780px) {
+    main {
+    height: 100vh;
+    }
+    .addmarker.btn{
+        border-radius: 100%;
+        margin: 20px;
+        font-size: 28px;
+        padding: 0px 10px 5px 10px;
+        line-height: 40px;
+        width: 50px;
+        height: 50px;         
+    }
+    .addmarker.btn:after {
+        content: "+";
+    }
+ }
