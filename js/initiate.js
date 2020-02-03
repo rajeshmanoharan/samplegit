@@ -1,4 +1,11 @@
 $(document).ready(function(){ 
+   setTimeout(function(){
+        
+       $('.logo').removeClass('animated fadeinUp');
+      $('main').fadeIn(1000).removeClass('off');
+       $('.logo').addClass('animated fadeinUp');
+    
+   },3000);
 
 $(".addmarker").click(function (ev) {
     if($('div.draggable').length < 3) {
